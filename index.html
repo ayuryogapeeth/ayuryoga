@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AyurYoga Dham | Ancient Wisdom • Healing • Transformation</title>
+    <meta name="description" content="A sanctuary where the ancient science of Yoga and Ayurveda meets the pristine mountains of Wayanad.">
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="nav-container">
+        <a href="index.html" class="brand-logo">AyurYoga Dham</a>
+        
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="teachers.html">Teachers</a></li>
+                <li><a href="retreats.html">Retreats</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+</header>
+
+<!-- Homepage Hero -->
+<section class="hero">
+    <img src="https://images.unsplash.com/photo-1545389336-eaeecece96ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Yoga Retreat Wayanad" class="hero-bg">
+    <div class="hero-content">
+        <h1>Transform Your Body, Mind & Spirit</h1>
+        <p class="hero-tagline">A sanctuary where the ancient science of Yoga and Ayurveda meets the pristine mountains of Wayanad.</p>
+        <div class="hero-actions">
+            <a href="retreats.html" class="btn">Book Your Retreat</a>
+            <a href="about.html" class="btn btn-outline" style="color: white; border-color: white;">Explore Programs</a>
+        </div>
+    </div>
+</section>
+
+<!-- About Section Intro -->
+<section class="section">
+    <div class="container text-center">
+        <h2 style="font-size: 3rem; margin-bottom: 2rem;">Rooted in Indian Tradition</h2>
+        <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto 3rem auto; color: var(--sage);">
+            Nestled amidst the mist-covered mountains of Wayanad, AyurYoga Dham offers authentic yoga retreats rooted in the Himalayan and traditional Indian yogic lineage.
+        </p>
+        <div class="grid-3 mt-2">
+            <div>
+                <h3 style="font-size: 1.5rem;">Nature</h3>
+                <p>Pure mountain air</p>
+            </div>
+            <div>
+                <h3 style="font-size: 1.5rem;">Authentic Yoga</h3>
+                <p>Traditional practices</p>
+            </div>
+            <div>
+                <h3 style="font-size: 1.5rem;">Ayurveda</h3>
+                <p>Holistic healing</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Food and Stay Teaser -->
+<section class="section section-bg-sage">
+    <div class="container">
+        <div class="grid-2">
+            <div>
+                <img src="https://images.unsplash.com/photo-1498837167922-c77f007bc74f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Ayurvedic Food" style="border-radius: 8px;">
+            </div>
+            <div>
+                <h2 style="font-size: 3rem;">Nourishment for Conscious Living</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 2rem;">Our kitchen follows Ayurvedic dietary principles using locally sourced organic ingredients.</p>
+                <ul style="list-style: none; padding-left: 0; font-size: 1.1rem; line-height: 2;">
+                    <li><i class="fas fa-leaf" style="color: var(--forest); margin-right: 10px;"></i> 100% Vegetarian meals</li>
+                    <li><i class="fas fa-leaf" style="color: var(--forest); margin-right: 10px;"></i> Sattvic cooking</li>
+                    <li><i class="fas fa-leaf" style="color: var(--forest); margin-right: 10px;"></i> Herbal detox drinks</li>
+                </ul>
+                <a href="about.html" class="btn mt-2">Learn More</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="footer-content">
+        <h2 class="footer-brand">AyurYoga Dham</h2>
+        <p class="hero-tagline">Ancient Wisdom • Healing • Transformation</p>
+        
+        <div class="contact-info">
+            <p><i class="fas fa-map-marker-alt"></i> Wayanad • Kerala • India</p>
+            <p><i class="fas fa-envelope"></i> contact@ayuryogadham.com</p>
+            <p><i class="fas fa-phone"></i> +91 90000 00000</p>
+        </div>
+
+        <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="teachers.html">Teachers</a></li>
+            <li><a href="retreats.html">Retreats</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        
+        <p>&copy; 2026 AyurYoga Dham. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/919847775966" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Mobile Menu Script -->
+<script>
+    document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+        const nav = document.querySelector('.nav-links');
+        if (nav.style.display === 'flex') {
+            nav.style.display = 'none';
+        } else {
+            nav.style.display = 'flex';
+            nav.style.flexDirection = 'column';
+            nav.style.position = 'absolute';
+            nav.style.top = '100%';
+            nav.style.left = '0';
+            nav.style.width = '100%';
+            nav.style.backgroundColor = 'rgba(253, 251, 247, 0.98)';
+            nav.style.padding = '2rem';
+            nav.style.boxShadow = '0 10px 10px rgba(0,0,0,0.1)';
+        }
+    });
+</script>
+
+</body>
+</html>
