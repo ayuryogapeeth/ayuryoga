@@ -381,64 +381,261 @@
     </div>
 </section>
 
-<!-- Contact Info & Form -->
-<section class="section section-bg-sage">
-    <div class="container">
-        <div class="grid-2">
-            <div>
-                <h2 style="font-size: 2.5rem; margin-bottom: 2rem; color: var(--text-light);">Get in Touch</h2>
-                <div style="margin-bottom: 2rem;">
-                    <h3 style="font-size: 1.5rem; color: var(--earth);"><i class="fas fa-map-marker-alt"></i> Location</h3>
-                    <p style="color: var(--text-light);">Wayanad, Kerala, India</p>
+<!-- Get in Touch + Map: Unified Redesign -->
+<section id="contact-map" class="contact-map-section">
+
+    <!-- Map fills the background -->
+    <div class="contact-map-iframe-wrap">
+        <iframe
+            src="https://maps.google.com/maps?q=11.670144,76.013676&z=16&output=embed"
+            width="100%"
+            height="100%"
+            style="border: 0; display: block;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="AyurYoga Dham Location - Wayanad, Kerala">
+        </iframe>
+    </div>
+
+    <!-- Contact card floats over the map -->
+    <div class="contact-card">
+        <div class="contact-card-header">
+            <span class="contact-eyebrow">Find Us</span>
+            <h2 class="contact-title">Get in Touch</h2>
+            <p class="contact-subtitle">We'd love to hear from you</p>
+        </div>
+
+        <div class="contact-info-rows">
+            <div class="contact-info-row">
+                <div class="contact-icon-wrap">
+                    <i class="fas fa-map-marker-alt"></i>
                 </div>
-                <div style="margin-bottom: 2rem;">
-                    <h3 style="font-size: 1.5rem; color: var(--earth);"><i class="fas fa-phone"></i> Phone</h3>
-                    <p style="color: var(--text-light);">+91 94000 83300</p>
+                <div>
+                    <div class="contact-label">Location</div>
+                    <div class="contact-value">Wayanad, Kerala, India</div>
                 </div>
             </div>
-            
-            <div>
-                <!-- Direct Contact Actions -->
-                <div style="background: var(--ivory); padding: 3rem; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); color: var(--text-dark);">
-                    <h3 style="font-size: 2rem; margin-bottom: 0.5rem;">Reach Out Directly</h3>
-                    <p style="color: var(--sage); margin-bottom: 2.5rem;">We'd love to hear from you. Connect with us through any of the channels below.</p>
-
-                    <a href="https://wa.me/919400083300" target="_blank" style="display: flex; align-items: center; gap: 1rem; background: #25D366; color: white; padding: 1rem 1.5rem; border-radius: 8px; text-decoration: none; font-size: 1.1rem; font-weight: 600; margin-bottom: 1rem; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
-                        <i class="fab fa-whatsapp" style="font-size: 1.5rem;"></i>
-                        Chat on WhatsApp
-                    </a>
-
-                    <a href="tel:+919400083300" style="display: flex; align-items: center; gap: 1rem; background: var(--forest); color: white; padding: 1rem 1.5rem; border-radius: 8px; text-decoration: none; font-size: 1.1rem; font-weight: 600; margin-bottom: 1rem; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
-                        <i class="fas fa-phone" style="font-size: 1.3rem;"></i>
-                        Call +91 94000 83300
-                    </a>
-
+            <div class="contact-info-row">
+                <div class="contact-icon-wrap">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <div>
+                    <div class="contact-label">Phone</div>
+                    <div class="contact-value">+91 94000 83300</div>
                 </div>
             </div>
         </div>
+
+        <div class="contact-actions">
+            <a href="https://wa.me/919400083300" target="_blank" class="contact-btn contact-btn-wa">
+                <i class="fab fa-whatsapp"></i>
+                WhatsApp Us
+            </a>
+            <a href="tel:+919400083300" class="contact-btn contact-btn-call">
+                <i class="fas fa-phone"></i>
+                Call Now
+            </a>
+        </div>
+
+        <a href="https://maps.google.com/maps?q=11.670144,76.013676&z=16" target="_blank" class="open-maps-link">
+            <img src="https://www.google.com/favicon.ico" width="14" height="14" alt=""> Open in Google Maps &rarr;
+        </a>
     </div>
+
 </section>
 
-<!-- Google Maps Embed -->
-<section style="position: relative; height: 450px; line-height: 0;">
-    <a href="https://maps.google.com/maps?q=11.670144,76.013676&z=16"
-       target="_blank"
-       style="position: absolute; top: 12px; right: 12px; z-index: 10; display: inline-flex; align-items: center; gap: 0.5rem; background: white; color: #333; padding: 0.6rem 1rem; border-radius: 6px; font-size: 0.9rem; font-weight: 600; text-decoration: none; box-shadow: 0 2px 8px rgba(0,0,0,0.25); transition: box-shadow 0.2s;"
-       onmouseover="this.style.boxShadow='0 4px 16px rgba(0,0,0,0.35)'"
-       onmouseout="this.style.boxShadow='0 2px 8px rgba(0,0,0,0.25)'">
-        <img src="https://www.google.com/favicon.ico" width="16" height="16" alt=""> Open in Google Maps
-    </a>
-    <iframe
-        src="https://maps.google.com/maps?q=11.670144,76.013676&z=16&output=embed"
-        width="100%"
-        height="450"
-        style="border: 0; display: block;"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        title="AyurYoga Dham Location - Wayanad, Kerala">
-    </iframe>
-</section>
+<style>
+/* ── Contact + Map Unified Section ── */
+.contact-map-section {
+    position: relative;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.contact-map-iframe-wrap {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.contact-map-iframe-wrap iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.contact-card {
+    position: relative;
+    z-index: 10;
+    background: rgba(253, 251, 247, 0.96);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    margin: 2rem 0 2rem 4rem;
+    width: 100%;
+    max-width: 360px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.6);
+}
+
+.contact-eyebrow {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--earth);
+    margin-bottom: 0.4rem;
+}
+
+.contact-title {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    color: var(--forest);
+    margin-bottom: 0.2rem;
+    line-height: 1.1;
+}
+
+.contact-subtitle {
+    font-size: 0.95rem;
+    color: var(--sage);
+    margin-bottom: 1.8rem;
+}
+
+.contact-info-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.8rem;
+    padding-bottom: 1.8rem;
+    border-bottom: 1px solid #eee;
+}
+
+.contact-info-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.9rem;
+}
+
+.contact-icon-wrap {
+    width: 36px;
+    height: 36px;
+    background: var(--forest);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.contact-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--sage);
+    font-weight: 600;
+    margin-bottom: 0.1rem;
+}
+
+.contact-value {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.contact-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.2rem;
+}
+
+.contact-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 0.85rem 1.2rem;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    letter-spacing: 0.3px;
+}
+
+.contact-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.contact-btn-wa {
+    background: #25D366;
+    color: white;
+}
+
+.contact-btn-wa:hover { color: white; }
+
+.contact-btn-call {
+    background: var(--forest);
+    color: white;
+}
+
+.contact-btn-call:hover { color: white; }
+
+.open-maps-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    font-size: 0.82rem;
+    color: var(--sage);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.open-maps-link:hover { color: var(--forest); }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .contact-map-section {
+        height: auto;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .contact-map-iframe-wrap {
+        position: relative;
+        height: 280px;
+        order: 2;
+    }
+
+    .contact-card {
+        position: relative;
+        margin: 1.5rem 1rem;
+        max-width: 100%;
+        order: 1;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .contact-card {
+        margin-left: 2rem;
+        max-width: 320px;
+    }
+}
+</style>
+
 
 <footer class="site-footer">
     <div class="footer-content">
