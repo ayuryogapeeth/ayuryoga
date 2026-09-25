@@ -235,7 +235,7 @@
                     <h3 style="color: var(--earth);">Weekend Escape</h3>
                     <p style="font-weight: 600; font-size: 1.2rem; margin-bottom: 1rem; color: var(--text-dark);">2 Days</p>
                     <p style="margin-bottom: 2rem; color: var(--text-dark);">Yoga • Meditation • Nature</p>
-                    <a href="https://wa.me/919400083300?text=Hi%2C%20I%27m%20interested%20in%20booking%20the%20Weekend%20Escape%20retreat%20at%20AyurYoga%20Dham.%20Please%20share%20more%20details." target="_blank" onclick="document.getElementById('contact-map').scrollIntoView({behavior:'smooth'}); return true;" class="btn btn-outline" style="width: 100%;">Book Now</a>
+                    <button onclick="openBookModal('Weekend Escape (2 Days)')" class="btn btn-outline" style="width:100%;cursor:pointer;">Book Now</button>
                 </div>
             </div>
 
@@ -245,7 +245,7 @@
                     <h3 style="color: var(--earth);">7 Day Transformation</h3>
                     <p style="font-weight: 600; font-size: 1.2rem; margin-bottom: 1rem; color: var(--text-dark);">7 Days</p>
                     <p style="margin-bottom: 2rem; color: var(--text-dark);">Complete healing journey</p>
-                    <a href="https://wa.me/919400083300?text=Hi%2C%20I%27m%20interested%20in%20booking%20the%207%20Day%20Transformation%20retreat%20at%20AyurYoga%20Dham.%20Please%20share%20more%20details." target="_blank" onclick="document.getElementById('contact-map').scrollIntoView({behavior:'smooth'}); return true;" class="btn" style="width: 100%;">Book Now</a>
+                    <button onclick="openBookModal('7 Day Transformation')" class="btn" style="width:100%;cursor:pointer;">Book Now</button>
                 </div>
             </div>
 
@@ -254,7 +254,7 @@
                     <h3 style="color: var(--earth);">14 Day Detox</h3>
                     <p style="font-weight: 600; font-size: 1.2rem; margin-bottom: 1rem; color: var(--text-dark);">14 Days</p>
                     <p style="margin-bottom: 2rem; color: var(--text-dark);">Ayurveda + Yoga + Dosha balancing</p>
-                    <a href="https://wa.me/919400083300?text=Hi%2C%20I%27m%20interested%20in%20booking%20the%2014%20Day%20Detox%20retreat%20at%20AyurYoga%20Dham.%20Please%20share%20more%20details." target="_blank" onclick="document.getElementById('contact-map').scrollIntoView({behavior:'smooth'}); return true;" class="btn btn-outline" style="width: 100%;">Book Now</a>
+                    <button onclick="openBookModal('14 Day Detox')" class="btn btn-outline" style="width:100%;cursor:pointer;">Book Now</button>
                 </div>
             </div>
         </div>
@@ -262,7 +262,7 @@
         <div class="text-center mt-2">
             <h3 style="font-size: 2rem; margin-top: 4rem; color: var(--text-light);">Private Retreat</h3>
             <p style="font-size: 1.2rem; color: var(--ivory); margin-bottom: 2rem;">Personalized one-to-one guidance</p>
-            <a href="https://wa.me/919400083300?text=Hi%2C%20I%27m%20interested%20in%20a%20Private%20Retreat%20at%20AyurYoga%20Dham.%20Please%20share%20more%20details." target="_blank" onclick="document.getElementById('contact-map').scrollIntoView({behavior:'smooth'}); return true;" class="btn btn-outline" style="color: var(--text-light); border-color: var(--text-light);">Enquire Now</a>
+            <button onclick="openBookModal('Private Retreat')" class="btn btn-outline" style="color:var(--text-light);border-color:var(--text-light);cursor:pointer;">Enquire Now</button>
         </div>
     </div>
 </section>
@@ -660,6 +660,49 @@
     <i class="fab fa-whatsapp"></i>
 </a>
 
+<!-- Booking Modal -->
+<div id="bookModal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.55);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);align-items:center;justify-content:center;">
+    <div style="background:#fdfbf7;border-radius:20px;padding:2.5rem 2rem;max-width:380px;width:90%;box-shadow:0 30px 80px rgba(0,0,0,0.3);position:relative;animation:modalIn 0.25s ease;">
+        <button onclick="closeBookModal()" style="position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.4rem;color:#aaa;cursor:pointer;line-height:1;">&times;</button>
+        <div style="text-align:center;margin-bottom:1.8rem;">
+            <div style="width:52px;height:52px;background:var(--forest);border-radius:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem auto;">
+                <i class="fas fa-spa" style="color:white;font-size:1.3rem;"></i>
+            </div>
+            <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--forest);margin-bottom:0.3rem;">Book Your Retreat</h3>
+            <p id="modalRetreatName" style="color:var(--earth);font-weight:600;font-size:0.95rem;"></p>
+            <p style="color:#aaa;font-size:0.82rem;margin-top:0.3rem;">Choose how you'd like to reach us</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:0.85rem;">
+            <a id="modalWaLink" href="#" target="_blank"
+               style="display:flex;align-items:center;gap:1rem;background:#25D366;color:white;padding:1rem 1.4rem;border-radius:12px;text-decoration:none;font-weight:700;font-size:1rem;transition:transform 0.15s,box-shadow 0.15s;"
+               onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 20px rgba(37,211,102,0.4)'"
+               onmouseout="this.style.transform='';this.style.boxShadow=''">
+                <i class="fab fa-whatsapp" style="font-size:1.5rem;"></i>
+                <div>
+                    <div>Chat on WhatsApp</div>
+                    <div style="font-size:0.78rem;opacity:0.8;font-weight:400;">Opens app or WhatsApp Web</div>
+                </div>
+            </a>
+            <a href="tel:+919400083300"
+               style="display:flex;align-items:center;gap:1rem;background:var(--forest);color:white;padding:1rem 1.4rem;border-radius:12px;text-decoration:none;font-weight:700;font-size:1rem;transition:transform 0.15s,box-shadow 0.15s;"
+               onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 20px rgba(44,76,59,0.4)'"
+               onmouseout="this.style.transform='';this.style.boxShadow=''">
+                <i class="fas fa-phone" style="font-size:1.2rem;"></i>
+                <div>
+                    <div>Call Us Directly</div>
+                    <div style="font-size:0.78rem;opacity:0.8;font-weight:400;">+91 94000 83300</div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<style>
+@keyframes modalIn {
+    from { opacity:0; transform:scale(0.93) translateY(14px); }
+    to   { opacity:1; transform:scale(1) translateY(0); }
+}
+</style>
+
 <!-- Mobile Menu Script -->
 <script>
     document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
@@ -686,6 +729,29 @@
                 document.querySelector('.nav-links').style.display = 'none';
             }
         });
+    });
+
+    // ── Booking Modal ──
+    function openBookModal(retreatName) {
+        document.getElementById('modalRetreatName').textContent = retreatName;
+        const msg = encodeURIComponent('Hi, I am interested in the ' + retreatName + ' at AyurYoga Dham. Please share more details.');
+        document.getElementById('modalWaLink').href = 'https://wa.me/919400083300?text=' + msg;
+        const modal = document.getElementById('bookModal');
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeBookModal() {
+        document.getElementById('bookModal').style.display = 'none';
+        document.body.style.overflow = '';
+    }
+
+    document.getElementById('bookModal').addEventListener('click', function(e) {
+        if (e.target === this) closeBookModal();
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeBookModal();
     });
 </script>
 
