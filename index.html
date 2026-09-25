@@ -424,7 +424,14 @@
 </section>
 
 <!-- Google Maps Embed -->
-<section style="height: 450px; line-height: 0;">
+<section style="position: relative; height: 450px; line-height: 0;">
+    <a href="https://maps.google.com/maps?q=11.670144,76.013676&z=16"
+       target="_blank"
+       style="position: absolute; top: 12px; right: 12px; z-index: 10; display: inline-flex; align-items: center; gap: 0.5rem; background: white; color: #333; padding: 0.6rem 1rem; border-radius: 6px; font-size: 0.9rem; font-weight: 600; text-decoration: none; box-shadow: 0 2px 8px rgba(0,0,0,0.25); transition: box-shadow 0.2s;"
+       onmouseover="this.style.boxShadow='0 4px 16px rgba(0,0,0,0.35)'"
+       onmouseout="this.style.boxShadow='0 2px 8px rgba(0,0,0,0.25)'">
+        <img src="https://www.google.com/favicon.ico" width="16" height="16" alt=""> Open in Google Maps
+    </a>
     <iframe
         src="https://maps.google.com/maps?q=11.670144,76.013676&z=16&output=embed"
         width="100%"
