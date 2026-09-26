@@ -3,17 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AyurYoga Dham | Ancient Wisdom • Healing • Transformation</title>
+    <title>Ayur Yoga Dham | Ancient Wisdom • Healing • Transformation</title>
     <meta name="description" content="A sanctuary where the ancient science of Yoga and Ayurveda meets the pristine mountains of Wayanad.">
     <link rel="stylesheet" href="style.css">
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .nav-links a.active {
+            color: var(--forest, #2c4c3b) !important;
+            font-weight: 700;
+            position: relative;
+        }
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--forest, #2c4c3b);
+            border-radius: 2px;
+        }
+    </style>
 </head>
 <body>
 
 <header class="site-header">
     <div class="nav-container">
-        <a href="#home" class="brand-logo">AyurYoga Dham</a>
+        <a href="#home" class="brand-logo">Ayur Yoga Dham</a>
         
         <nav>
             <ul class="nav-links">
@@ -22,7 +39,7 @@
                 <li><a href="#teachers">Teachers</a></li>
                 <li><a href="#retreats">Retreats</a></li>
                 <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact-map">Contact</a></li>
             </ul>
         </nav>
         
@@ -52,7 +69,7 @@
     <div class="container text-center">
         <h2 style="font-size: 3rem; margin-bottom: 2rem;">Rooted in Indian Tradition</h2>
         <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto 3rem auto; color: var(--sage);">
-            Nestled amidst the mist-covered mountains of Wayanad, AyurYoga Dham offers authentic yoga retreats rooted in the Himalayan and traditional Indian yogic lineage.
+            Nestled amidst the mist-covered mountains of Wayanad, Ayur Yoga Dham offers authentic yoga retreats rooted in the Himalayan and traditional Indian yogic lineage.
         </p>
         <div class="grid-3 mt-2">
             <div>
@@ -98,7 +115,7 @@
             <div>
                 <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">The Experience</h2>
                 <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
-                    With a deep fascination for preserving authentic yogic wisdom, AyurYoga Dham was founded to provide genuine yoga education beyond fitness.
+                    With a deep fascination for preserving authentic yogic wisdom, Ayur Yoga Dham was founded to provide genuine yoga education beyond fitness.
                 </p>
                 <p style="font-size: 1.1rem; margin-bottom: 1rem;">We welcome students from across the world seeking:</p>
                 <ul style="list-style: none; padding-left: 0; font-size: 1.1rem; line-height: 2; margin-bottom: 2rem; color: var(--sage);">
@@ -167,7 +184,7 @@
 
 
 <!-- Personalized Healing Programs -->
-<section class="section">
+<section id="retreats" class="section">
     <div class="container">
         <div class="section-header">
             <h2>Personalized Healing Programs</h2>
@@ -235,7 +252,7 @@
 </section>
 
 <!-- #retreats: Signature Retreats -->
-<section id="retreats" class="section section-bg-sage">
+<section class="section section-bg-sage">
     <div class="container">
         <div class="section-header">
             <h2>Signature Retreats</h2>
@@ -327,7 +344,7 @@
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
-            title="AyurYoga Dham Location - Wayanad, Kerala">
+            title="Ayur Yoga Dham Location - Wayanad, Kerala">
         </iframe>
     </div>
 
@@ -572,7 +589,7 @@
 
 <footer class="site-footer">
     <div class="footer-content">
-        <h2 class="footer-brand">AyurYoga Dham</h2>
+        <h2 class="footer-brand">Ayur Yoga Dham</h2>
         <p class="hero-tagline" style="margin-bottom: 1rem;">Ancient Wisdom • Healing • Transformation</p>
         
         <ul class="footer-links">
@@ -581,10 +598,10 @@
             <li><a href="#teachers">Teachers</a></li>
             <li><a href="#retreats">Retreats</a></li>
             <li><a href="#blog">Blog</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact-map">Contact</a></li>
         </ul>
         
-        <p>&copy; 2026 AyurYoga Dham. All rights reserved.</p>
+        <p>&copy; 2026 Ayur Yoga Dham. All rights reserved.</p>
     </div>
 </footer>
 
@@ -638,28 +655,27 @@
 
 <!-- Mobile Menu Script -->
 <script>
-    document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
-        const nav = document.querySelector('.nav-links');
-        if (nav.style.display === 'flex') {
-            nav.style.display = 'none';
-        } else {
-            nav.style.display = 'flex';
-            nav.style.flexDirection = 'column';
-            nav.style.position = 'absolute';
-            nav.style.top = '100%';
-            nav.style.left = '0';
-            nav.style.width = '100%';
-            nav.style.backgroundColor = 'rgba(253, 251, 247, 0.98)';
-            nav.style.padding = '2rem';
-            nav.style.boxShadow = '0 10px 10px rgba(0,0,0,0.1)';
-        }
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    const navMenu = document.querySelector('.nav-links');
+
+    menuBtn.addEventListener('click', function() {
+        navMenu.classList.toggle('open');
+        // Swap hamburger ↔ close icon
+        const icon = menuBtn.querySelector('i');
+        icon.classList.toggle('fa-bars');
+        icon.classList.toggle('fa-xmark');
+        document.body.style.overflow = navMenu.classList.contains('open') ? 'hidden' : '';
     });
 
     // Close mobile menu on link click
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
             if (window.innerWidth <= 768) {
-                document.querySelector('.nav-links').style.display = 'none';
+                navMenu.classList.remove('open');
+                const icon = menuBtn.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-xmark');
+                document.body.style.overflow = '';
             }
         });
     });
@@ -667,7 +683,7 @@
     // ── Booking Modal ──
     function openBookModal(retreatName) {
         document.getElementById('modalRetreatName').textContent = retreatName;
-        const msg = encodeURIComponent('Hi, I am interested in the ' + retreatName + ' at AyurYoga Dham. Please share more details.');
+        const msg = encodeURIComponent('Hi, I am interested in the ' + retreatName + ' at Ayur Yoga Dham. Please share more details.');
         document.getElementById('modalWaLink').href = 'https://wa.me/919400083300?text=' + msg;
         const modal = document.getElementById('bookModal');
         modal.style.display = 'flex';
@@ -686,6 +702,29 @@
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') closeBookModal();
     });
+
+    // ── Active Nav Highlight ──
+    const navSections = ['home', 'about', 'teachers', 'retreats', 'blog', 'contact-map'];
+    const navLinks = {};
+    navSections.forEach(id => {
+        const el = document.getElementById(id);
+        const link = document.querySelector(`.nav-links a[href="#${id}"]`);
+        if (el && link) navLinks[id] = { el, link };
+    });
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            const id = entry.target.id;
+            if (navLinks[id]) {
+                if (entry.isIntersecting) {
+                    Object.values(navLinks).forEach(({ link }) => link.classList.remove('active'));
+                    navLinks[id].link.classList.add('active');
+                }
+            }
+        });
+    }, { rootMargin: '-30% 0px -60% 0px', threshold: 0 });
+
+    Object.values(navLinks).forEach(({ el }) => observer.observe(el));
 </script>
 
 </body>
