@@ -319,9 +319,36 @@ img {
 @media (max-width: 768px) {
   .nav-links {
     display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(253, 251, 247, 0.98);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 6rem 2rem 2rem;
+    gap: 0;
+    z-index: 999;
+    overflow-y: auto;
+    box-sizing: border-box;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .nav-links li {
+    border-bottom: 1px solid rgba(44,76,59,0.1);
+  }
+  .nav-links a {
+    display: block;
+    padding: 1.1rem 0;
+    font-size: 1.3rem;
+    text-align: center;
   }
   .mobile-menu-btn {
     display: block;
+    z-index: 1001;
   }
   .hero-content h1 {
     font-size: 3rem;
